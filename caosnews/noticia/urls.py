@@ -28,7 +28,7 @@ urlpatterns = [
 
     path('nacional/',views.nacional,name='nacional'),
 
-    path('contacto/',views.contacto,name='contacto'),
+    path('contacto/',views.contacto_view,name='contacto'),
     
     path('login/',views.login,name='login'),  
 
@@ -37,6 +37,9 @@ urlpatterns = [
     path('form_contacto/',views.form_contacto,name='form_contacto'),
 
     path('form-mod-contacto/<tel>',views.form_mod_contacto, name="form_mod_contacto"),
+
+    path('contacto/eliminar/<str:nombre>/', views.eliminar_contacto, name='eliminar_contacto'),
+
 
 
 ]

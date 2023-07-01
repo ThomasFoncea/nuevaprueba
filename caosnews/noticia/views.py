@@ -1,8 +1,8 @@
-from django.shortcuts import render
 from django.shortcuts import  render, redirect  
 from django.contrib.auth import login 
 from django.contrib import messages
 from .forms import ContactoForm
+from .models import contacto
 
 #from .models import
 #from .forms import 
@@ -25,8 +25,14 @@ def nacional(request):
 def login(request):
     return render(request,'login.html')
 
-def contacto(request):
-    return render(request,'contacto.html') 
+def contacto_view(request):
+    contactos = contacto.objects.all()
+    return render(request, 'contacto.html', {'contactos': contactos}) 
+
+def eliminar_contacto(request, nombre):
+    contactos = contacto.objects.get(nombre=nombre)
+    contactos.delete()
+    return redirect('contacto')
 
 def recuperarcontraseña(request):
     return render(request,'recuperarcontraseña.html')
@@ -39,7 +45,8 @@ def form_contacto(request):
         formulario = ContactoForm(request.POST)
         if formulario.is_valid:
             formulario.save()
-            datos['mensaje'] = "Guardados correctamente"
+            datos['mensaje'] = "Guardados correctamente" 
+            redirect('contacto')
     return render(request, 'form_contacto.html', datos)
 
 def form_mod_contacto(request, tel):
