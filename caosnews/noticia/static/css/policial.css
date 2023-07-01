@@ -1,0 +1,197 @@
+html {
+    background-color: #eee;
+    box-sizing: border-box;
+    font-family: Georgia, serif;
+    font-size: 100%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%
+  }
+  
+  body,
+  html {
+    min-height: 100%
+  }
+  
+  body {
+    font-size: 1em;
+    line-height: 1.2777777778;
+    margin: 0 auto;
+    width: 80%;
+    overflow: hidden
+  }
+  
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 0 0 20px;
+    font-weight: 700
+  }
+  
+  h1 {
+    font-size: 1.66667rem;
+    font-size: 1.6666666667rem;
+    line-height: 1.081
+  }
+  
+  h2 {
+    font-size: 1.33333rem;
+    font-size: 1.3333333333rem;
+    line-height: 1.4375
+  }
+  
+  h3 {
+    font-size: 1.22222rem;
+    font-size: 1.2222222222rem;
+    line-height: 1.0454545455
+  }
+  
+  h4 {
+    font-size: 18px;
+    font-size: 1rem;
+    line-height: 1.2777777778
+  }
+  
+  h5 {
+    font-size: .88889rem;
+    font-size: .8888888889rem;
+    line-height: 1.4375
+  }
+  
+  h6 {
+    font-size: .77778rem;
+    font-size: .7777777778rem;
+    line-height: 1.6428571429
+  }
+  
+  a {
+    background-color: transparent;
+    color: #000;
+    text-decoration: underline
+  }
+  
+  a:focus,
+  a:hover {
+    color: #000;
+    text-decoration: none
+  }
+  
+  a:focus {
+    outline: dotted thin
+  }
+  
+  a:active,
+  a:hover {
+    outline: 0
+  }
+  
+  body > header {
+    text-align: center;
+    font-family: Avenir-Book, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-transform: uppercase;
+    width: 80%;
+    margin: 0 auto;
+  }
+  
+  body > header h1 {
+    color: #fff;
+    font-size: 1.33333rem;
+    margin-bottom: 15px;
+    font-weight: 400;
+    color: #000;
+  }
+  
+  body > header h1:after {
+    border-bottom-color: #999;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    content: '';
+    display: block;
+    left: 50%;
+    margin: 0 auto 0 -30%;
+    position: absolute;
+    width: 60%;
+  }
+  
+  body > header h2 {
+    color: #999;
+    margin-bottom: 0;
+  }
+  
+  article {
+    max-height: 100%;
+    width: auto
+  }
+  
+  article h2 {
+    color: #718251;
+    font-size: 2.22222rem;
+    font-weight: 400;
+    line-height: 1
+  }
+  
+  article header {
+    color: #555;
+    font-size: 1.22222rem;
+    margin-bottom: 20px
+  }
+  
+  article header p {
+    margin-bottom: 0
+  }
+  
+  article address {
+    border-bottom-color: #999;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    color: #555;
+    display: inline-block;
+    font-size: .77778rem;
+    font-family: Avenir-Book, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    margin-bottom: 20px;
+    text-transform: uppercase
+  }
+  
+  article section {
+    margin-bottom: 20px;
+    position: relative
+  }
+  
+  article section header {
+    background-color: #fff;
+    background-color: rgba(255, 255, 255, .9)
+  }
+  
+  article section header h2 {
+    font-size: 1rem;
+    margin: 0
+  }
+  
+  article section header h2 a {
+    display: block;
+    padding: 20px;
+    text-decoration: none
+  }
+  
+  article section > div {
+    background-color: #fff;
+    border-top-color: #eee;
+    border-top-style: solid;
+    border-top-width: 1px;
+    padding: 20px
+  }
+  
+  article section > div p {
+    margin-bottom: 0
+  }
+  
+  article section > div p + p {
+    margin-top: 20px
+  }

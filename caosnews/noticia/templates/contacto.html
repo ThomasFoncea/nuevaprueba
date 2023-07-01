@@ -1,0 +1,47 @@
+<html lang="en">
+{% load static %}
+<head>
+	<meta charset="UTF-8">
+	<title>Formulario de Contacto</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.1/css/materialize.min.css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+	<div class="mb-3">
+		<h1>Solicitudes De Contacto</h1>
+		<hr>
+		<div class="row">
+			<table class="table">
+				<tr>
+					<th scope="col">Noticia</th>
+					<th scope="col">Correo</th>
+					<th scope="col">Telefono</th>
+					<th scope="col">direccion</th>
+					<th scope="col">Mensaje</th>
+				</tr>
+				{% for con in contactos %}
+				<tr>
+					<td>{{con.Noticia}}</td>
+					<td>{{con.correo}}</td>
+					<td>{{con.telefono}}</td>
+					<td>{{con.direccion}}</td>
+					<td>{{con.mensaje}}</td>
+					<td><a class="btn btn-success" href="{% url 'form_mod_contacto' con.telefono %}">Modificar</a></td>
+					<td><a class="btn btn-danger" href="{% url 'form_del_contacto' con.telefono %}">Eliminar</a></td>
+				</tr>
+				{% endfor %}
+			</table>
+
+			<br><br>
+		</div>
+		<div class="row mb-3">
+			<a class="btn btn-primary" href="{% url 'form_contacto'%}" role="link">Nuevo Contacto</a>
+		</div>
+
+		<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.1/js/materialize.min.js"></script>
+		<script src="{% static '/js/main.js' %}"></script>
+</body>
+
+</html>

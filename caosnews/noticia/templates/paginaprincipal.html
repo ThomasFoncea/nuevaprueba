@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+{%load static%}
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="{% static 'css/principal.css'%}">
+</head>
+<body>
+  <section class="photo" id="inicio">
+  
+    <div class="nav" id="sticker">
+    <label for="toggle">&#9776</label>
+    <input type="checkbox" id="toggle" />
+    <div class="menu">
+      <h5 class="logo">Caos News</h5>
+      <a href="{% url 'paginaprincipal' %}">inicio</a>
+      <a href="{% url 'login' %}">Login</a>
+      <a href="#Noticias Destacadas">Noticas Destacadas</a>
+      <a href="{% url 'contacto' %}">contacto</a>
+    </div>
+  </div>
+    <div class="photo-text">
+    <h4 data-ix="skype">Noticias</h4>
+    <p data-ix="subtitle-hero-up"> Bienvenido la paginas de noticias Caos News, aca podras encontrar noticas subida en el momento
+      por nuestros periodistas, tambien si eres periodista egresado podras registrarte en nuestra pagina para poder subir noticas totalmente gratuita. </p>
+      </div>
+    <div class="overlay"></div>
+  </section>
+
+    <div class="inner-content">
+        <div id="slider">
+          <figure>
+            <ul>                                                          
+              <li>                                                       
+                <h4>Deporte</h4>
+                <img onclick="location.href='{% url  'deporte' %}'" src="{% static 'imagen/deporte.jpg' %}" alt="" width="480" height="380" />
+                <p>Capitán del Marsella desnuda la personalidad de Alexis Sánchez: “A veces se queja un poco; no le gusta que lo critiquen”.</p>
+              </li>
+              <li>
+                <h4>Policial</h4>
+                <img onclick="location.href='{% url  'policial' %}'" src="{% static 'imagen/policial.jpg' %}" alt="" width="480" height="380" />
+                <p>Fatal accidente de tránsito deja cuatro fallecidas en carretera que une Iquique con Alto Hospicio.</p>
+              </li>
+              <li>
+                <h4>Tendencias</h4>
+                <img onclick="location.href='{% url  'tendencia' %}'" src="{% static 'imagen/tendencia.jpg' %}" alt="" width="480" height="380" />
+                <p>Donatella Versace: la historia de la heredera adicta a la cocaína y las cirugías.</p>
+              </li>
+              <li>
+                <h4>Nacional</h4>
+                <img onclick="location.href='{% url  'nacional' %}'" src="{% static 'imagen/nacional.jpg' %}" alt="" width="480" height="380" />
+                <p>Hallan 76 kilos de droga en camioneta tras persecución policial en La Ligua.</p>
+              </li>
+            </ul>
+          </figure>
+        </div>
+      </div>
+    </div>
+  
+    <section class="portafolio" id="Noticias Destacadas">
+      <h4 data-ix="slowfade-scroll-bigs">Noticias Destacadas</h4>
+      <div class="portafolio-container">
+        <section class="portafolio-item">
+          <img src="{% static 'imagen/destacado1.jpg' %}" alt="" class="portafolio-img" />
+          <section class="portafolio-text">
+            <h5>Policial</h5>
+            <p>Atropellan a cabo segundo de Carabineros tras un control vehicular en Punitaqui.</p>
+          </section>
+        </section>
+        <section class="portafolio-item">
+          <img src="{% static 'imagen/destacado2.jpg' %}" alt="" class="portafolio-img"/>
+          <section class="portafolio-text">
+            <h5>Tendencias</h5>
+            <p>Chile brilló en la alfombra roja de la Met Gala 2023: estos fueron los looks más aclamados.</p>
+          </section>
+        </section>
+        <section class="portafolio-item">
+          <img src="{% static 'imagen/destacado3.jpg' %}" alt="" class="portafolio-img"/>
+          <section class="portafolio-text">
+            <h5>Nacional</h5>
+            <p>Consulta por tu local de votación para las elecciones de Consejo Constitucional 2023.</p>
+          </section>
+        </section>
+      </div>
+    </section>
+</body>
+</html>
